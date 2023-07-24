@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Video Info</title>
+</head>
+<body>
+    {% if 'error' in video_info %}
+        <h1>Error: {{ video_info.error }}</h1>
+    {% else %}
+        <h1>Video Information</h1>
+        <p>Title: {{ video_info.title }}</p>
+        <p>Author: {{ video_info.author }}</p>
+        <p>Duration: {{ video_info.duration }} seconds</p>
+        <p>Views: {{ video_info.views }}</p>
+        <img src="{{ video_info.thumbnail_url }}" alt="Thumbnail">
+    {% endif %}
+</body>
+</html>
