@@ -40,6 +40,4 @@ def get_video_info_and_download(youtube_link, quality):
         return {'error': str(e)}, None
 
 if __name__ == '__main__':
-    if not os.path.isdir(app.config['DOWNLOAD_FOLDER']):
-        os.makedirs(app.config['DOWNLOAD_FOLDER'])
     app.run(debug=True)
